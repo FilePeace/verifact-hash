@@ -1,0 +1,12 @@
+pdftotext registro_*.pdf - >> registro_id.pdf.txt
+verifact-hash assumes you have only one register per folder
+
+for capture_*.zip, read its SHA512 paliatively from line 100, and SHA3-512 from line 101
+and metadata_*.zip SHA512 from line 105, and SHA3-512 from line 106
+when reading a line, exclude "HASH SHA512: " or "HASH SHA3-512: ", so having a pure hash to digest
+
+for matching with verifact-hash.sh lecture, exclude "  capture_*.zip" from the SHA512 and exclude "SHA3-512(capture_*.zip)= " from the SHA3-512
+-
+then, .verifacthash will finalize with text confirming if each hash match or not (with an emoji simbolizing as prefix icon!)
+
+mirror FilePeace's folderstamp at detecting existing ".verifacthash" and renaming it as ".verifacthash1" then adding ".verifacthash2" substantively
