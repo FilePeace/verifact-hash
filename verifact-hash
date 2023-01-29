@@ -1,3 +1,5 @@
+#!/bin/bash -e
+
 function display {
 function job {
 echo "--------------------------------------------"
